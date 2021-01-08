@@ -1,13 +1,13 @@
 // TODO: Include packages needed for this application
 // const inquirer = require('inquirer.js');
 var inquirer = require('inquirer');
-const fs = require('fs')
-let data = 
+const fs = require('fs');
+const prompt = require("./prompt.js");
+ 
 //const markdown = require('generateMarkdown.js');
 
 // TODO: Create an array of questions for user input
-//const questions = [];
-//sections  Installation, Usage, License, Contributing, , and Questions
+//const questions = [];  
 inquirer
     .prompt([
         {
@@ -31,32 +31,40 @@ inquirer
             type: "input",
             message: "If required state how your appiclation should be installed",
             name: "install",
-        }
-        {
-            type: "input",
-            message: "table of contents",
-            name: "TOC",
         },
+        { 
+            type: "input",
+            message: "If required state how your appiclation should be installed",
+            name: "license",
+        },
+        { 
+            type: "checkbox",
+            message: "state whether or not you are open to contributors:",
+            name: "contribute",
+            choices: ["Yes", "no",]
+        },
+        
+        
+        {
+            type: 'checkbox',
+            message: 'choose your badge',
+            name: 'choices',
+            choices: [
+                "GNU AGPLv3", "Mozilla Public License 2.0", "The Unlicense"
+      ]
+    },
         {
             type: "input",
             message: "state tests to check code:",
             name: "tests",
         },
-
-        {
-            type: 'checkbox',
-            message: 'What is your preferred method of communication?',
-            name: 'choices',
-            choices: [
-                "page", "fax", "love"
-      ]
-    },
     {
         type: "input",
-        message: "What questins do you have for the application created?",
-        name: "questions",
+        message: "What questions do you have for the application created?",
+        name: "usage",
     },
   ])
+  // Arrow function to state whether criteria worked or not.
     .then((response) =>
         response.confirm === response.password
             ? console.log('Success!')
@@ -65,7 +73,7 @@ inquirer
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    fs.writeFileSync(`${response.name}.json`, data, (err) => {
+    fs.writeFileSync(fileName, data, (err) => {
         if (err){
         console.log("What happened? Error!");
     } else{
