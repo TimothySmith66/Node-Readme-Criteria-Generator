@@ -2,9 +2,15 @@
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {}
 
+https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)
+https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)
+https://img.shields.io/website-up-down-green-red/http/shields.io.svg
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {}
+function renderLicenseLink(license) {
+  if( );
+  else( )
+}
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
