@@ -9,6 +9,17 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "inquirer": "^6.3.1"
-  }
+    "index.js": "0.0.3",
+    "inquirer": "^6.5.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TimothySmith66/Node-Readme-Criteria-Generator.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/TimothySmith66/Node-Readme-Criteria-Generator/issues"
+  },
+  "homepage": "https://github.com/TimothySmith66/Node-Readme-Criteria-Generator#readme",
+  "devDependencies": {}
 }

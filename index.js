@@ -1,9 +1,11 @@
 // TODO: Include packages needed for this application
-const inquirer = require("inquirer")
-// TODO: Create an array of questions for user input
-const questions = [];
-sections  Installation, Usage, License, Contributing, Tests, and Questions
+// const inquirer = require('inquirer.js');
+var inquirer = require('inquirer');
 
+// TODO: Create an array of questions for user input
+//const questions = [];
+//sections  Installation, Usage, License, Contributing, Tests, and Questions
+inquirer
     .prompt([
         {
             type: 'input',
@@ -32,7 +34,7 @@ sections  Installation, Usage, License, Contributing, Tests, and Questions
             message: 'What is your preferred method of communication?',
             name: 'choices',
             choices: [
-                (page), fax, (love);
+                (page), fax, (love)
       ]
     },
   ])
