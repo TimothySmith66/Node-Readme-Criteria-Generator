@@ -14,7 +14,7 @@ function renderLicenseLink(license) {
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
+function renderLicenseSection(license) {},
 
 // TODO: Create a function to generate markdown for README
 
@@ -25,14 +25,60 @@ function generateMarkdown(userResponses, userInfo) {
   let draftToC = `## Table of Contents`;
 
   if (userResponses.install !== '') { TOC += `
-  * [Install](#install)` };
+  * [install](#install)` };
 
   if (userResponses.usage !== '') { TOC += `
-  * [Usage](#usage)` };
+  * [usage](#usage)` };
 
   if (userResponses.contribute !== '') { TOC += `
   * [contribute](#contribute)` };
 
   if (userResponses.tests !== '') { TOC += `
-  * [Tests](#tests)` };
+  * [tests](#tests)` };
 
+  let draftMarkdown = 
+  `# ${userResponses.title}
+  ![Badge for GitHub repo top language](https://img.shields.io/github/languages/top/${userResponses.username}/${userResponses.repo}?style=flat&logo=appveyor) ![Badge for GitHub last commit](https://img.shields.io/github/last-commit/${userResponses.username}/${userResponses.repo}?style=flat&logo=appveyor)
+  
+  Check out the badges hosted by [shields.io](https://shields.io/).
+  
+  
+  ## Description 
+  
+  *""* 
+  
+  ${userResponses.description}
+  `
+
+  // Table of Contents for markdown
+  draftMarkdown += draftTOC;
+ 
+  // Add License to TOC
+  draftMarkdown += `
+  * [license](#license)`;
+  
+
+  // Optional Installation section
+  if (userResponses.install !== '') {
+  
+  draftMarkdown +=
+  `
+  
+  ## Installation
+
+  
+  ${userResponses.installation}`
+  };
+  
+
+  // Usage
+  if (userResponses.usage !== '') {
+  
+  draftMarkdown +=
+  
+  `
+  
+  ## Usage 
+  
+  ${userResponses.usage}`
+  };

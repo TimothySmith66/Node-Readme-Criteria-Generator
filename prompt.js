@@ -41,7 +41,7 @@ const renderprompt = ({
               </div>
               <div class="row">
                 <div class="col-lg-8">
-                  <h3>${name}</h3>
+                  <h3>${username}</h3>
                   <br />
                   <h3>${location}</h3>
                   <br />
@@ -80,4 +80,4 @@ const renderprompt = ({
       </html>
       `;
   };
-  module.exports = renderPortfolio;
+  module.exports = renderprompt;

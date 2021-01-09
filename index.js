@@ -66,7 +66,7 @@ inquirer
   ])
   // Arrow function to state whether criteria worked or not.
     .then((response) =>
-        response.confirm === response.password
+        prompt.confirm === prompt.password
             ? console.log('Success!')
             : console.log('review criteria then try again')
     );
